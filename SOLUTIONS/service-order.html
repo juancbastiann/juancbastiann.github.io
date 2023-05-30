@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLUTIONS S.A. - Generar Orden de Servicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>SOLUTIONS S.A.</h1>
+
+    <section id="service-order-section">
+        <h2>Generar Orden de Servicio</h2>
+        <form action="submit-service-order.php" method="POST">
+            <label for="computerModel">Modelo del computador:</label>
+            <input type="text" id="computerModel" name="computerModel" required>
+
+            <label for="computerType">Tipo de computador:</label>
+            <select id="computerType" name="computerType" required>
+                <option value="laptop">Laptop</option>
+                <option value="desktop">Computadora de escritorio</option>
+            </select>
+
+            <label for="computerBrand">Marca del computador:</label>
+            <input type="text" id="computerBrand" name="computerBrand" required>
+
+            <label for="computerSpecs">Características:</label>
+            <textarea id="computerSpecs" name="computerSpecs" required></textarea>
+
+            <label for="problemDescription">Descripción del problema:</label>
+            <textarea id="problemDescription" name="problemDescription" required></textarea>
+
+            <button type="submit">Generar Orden</button>
+        </form>
+        
+        <button id="back-button" onclick="goBack()">Volver</button>
+    </section>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
